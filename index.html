@@ -1,23 +1,1521 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
+
+
+    <!-- JSON-LD Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "파주개인회생 법률상담센터",
+        "url": "https://law.reliabledone.com/paju",
+        "description": "2026년도 최신 최저생계비 개정안에 따른 파주시 관내 개인회생 및 개인파산 맞춤형 컨설팅. 운정신도시, 금촌, 문산 등 파주 전 지역 신속 출장 상담 및 자격 요건 즉시 계산.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "파주개인회생지원센터",
+            "logo": "https://law.reliabledone.com/paju/logo.webp"
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://law.reliabledone.com/paju/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "2026년 파주개인회생 최저생계비 기준은 어떻게 되나요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "2026년 기준으로 조정된 보건복지부 중위소득 60% 반영 법정 최저생계비는 1인 가구 1,538,542원, 2인 가구 2,519,575원, 3인 가구 3,215,421원, 4인 가구 3,896,842원입니다. 이 금액을 제외한 가용소득이 매월 납부할 예상 변제금으로 책정됩니다."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "주식이나 비트코인 도박 채무도 파주개인회생으로 탕감이 가능한가요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "네, 가능합니다. 의정부지방법원은 최근 청년층의 주식 및 가상화폐 투자 실패로 인한 채무에 대해 전향적인 입장을 보이고 있으나, 최근 채무 비율이 높거나 사행성 행위가 심할 경우 법원의 보정명령 단계에서 청산가치에 반영하라는 엄격한 심사가 있을 수 있으므로 전문 도산 변호사의 컨설팅이 필수적입니다."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "파주개인회생 맞춤형 채무 조정 법률 서비스",
+        "description": "파주시 전 지역 직장인, 주부, 자영업자 맞춤형 개인회생 신청 및 의정부지방법원 전담 보정 대응 서비스.",
+        "provider": {
+            "@type": "LegalService",
+            "name": "파주개인회생 법률상담센터",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "파주시",
+                "addressRegion": "경기도",
+                "addressCountry": "KR"
+            }
+        },
+        "areaServed": "경기도 파주시"
+    }
+    </script>
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+    <!-- CSS Styling for Soft, Trustworthy, Modern Responsive Design -->
+    <style>
+        :root {
+            --primary-color: #0A1D37; /* Deep Trustworthy Navy */
+            --secondary-color: #1B4353; /* Deep Teal Gray */
+            --accent-color: #C5A880; /* Elegant Warm Gold */
+            --accent-light: #F1EAE0; /* Soft Gold Tint */
+            --text-dark: #2C3E50; /* Rich Gray-Blue */
+            --text-light: #F8F9FA;
+            --bg-light: #FAFBFC; /* Extremely soft light gray */
+            --bg-white: #FFFFFF;
+            --border-color: #E2E8F0;
+            --success-color: #2E7D32;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styling */
+        .header {
+            background-color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--text-light);
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text span {
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            font-weight: 500;
+            color: var(--text-light);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Banner Section */
+        .hero-banner {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            padding: 80px 0;
+            color: var(--text-light);
+            position: relative;
+            overflow: hidden;
+            border-bottom: 5px solid var(--accent-color);
+        }
+
+        .hero-content {
+            max-width: 750px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero-tagline {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .hero-banner h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            line-height: 1.3;
+            margin-bottom: 25px;
+            letter-spacing: -1px;
+        }
+
+        .hero-banner h1 span {
+            color: var(--accent-color);
+            background: linear-gradient(120deg, rgba(197, 168, 128, 0.2) 0%, rgba(197, 168, 128, 0.4) 100%);
+            padding: 2px 10px;
+            border-radius: 4px;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            margin-bottom: 35px;
+            font-weight: 300;
+        }
+
+        /* Custom Interactive Segment: Core Application S01 & Calculator Dashboard */
+        .dashboard-section {
+            margin-top: -50px;
+            margin-bottom: 60px;
+            z-index: 10;
+            position: relative;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 991px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+            .dashboard-section {
+                margin-top: -20px;
+            }
+            .hero-banner h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        /* Modern Glassmorphic Consultation Card */
+        .consult-card {
+            background: var(--bg-white);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(15, 32, 55, 0.12);
+            padding: 40px;
+            border: 1px solid var(--border-color);
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .card-title-cell {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .card-subtitle-cell {
+            font-size: 1rem;
+            color: var(--secondary-color);
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 18px;
+            font-size: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            outline: none;
+            transition: all 0.3s ease;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        .form-control:focus {
+            border-color: var(--accent-color);
+            background-color: var(--bg-white);
+            box-shadow: 0 0 0 4px rgba(197, 168, 128, 0.15);
+        }
+
+        .phone-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .phone-select {
+            flex: 0 0 100px;
+        }
+
+        .phone-input {
+            flex: 1;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+
+        .checkbox-container input {
+            margin-top: 4px;
+        }
+
+        .btn-submit {
+            display: block;
+            width: 100%;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            font-size: 1.15rem;
+            font-weight: 800;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(197, 168, 128, 0.3);
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            box-shadow: 0 4px 15px rgba(15, 32, 55, 0.3);
+        }
+
+        /* Visual Dynamic Rehabilitation Calculator Card */
+        .calculator-card {
+            background: var(--bg-white);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(15, 32, 55, 0.12);
+            padding: 40px;
+            border: 1px solid var(--border-color);
+            border-top: 6px solid var(--accent-color);
+        }
+
+        .calc-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .calc-badge {
+            background-color: var(--accent-light);
+            color: var(--secondary-color);
+            font-size: 0.8rem;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 700;
+        }
+
+        .calculator-ui {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .calc-row {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .calc-row > div {
+            flex: 1;
+        }
+
+        .calculator-result-box {
+            background-color: var(--bg-light);
+            border-left: 5px solid var(--accent-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .result-highlight {
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .result-text {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Long-Form Informational Sections */
+        .content-section {
+            padding: 60px 0;
+            background-color: var(--bg-white);
+        }
+
+        .content-section.alt-bg {
+            background-color: var(--bg-light);
+        }
+
+        .section-header-wrap {
+            margin-bottom: 45px;
+            max-width: 800px;
+        }
+
+        .section-header-wrap h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 15px;
+            line-height: 1.3;
+        }
+
+        .section-header-wrap h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            bottom: 5px;
+            width: 5px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .section-header-wrap p {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            font-weight: 400;
+        }
+
+        /* Article Card Styles */
+        .article-block {
+            margin-bottom: 40px;
+        }
+
+        .article-block h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 18px;
+            line-height: 1.4;
+        }
+
+        .article-block p {
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .article-block .highlight-box {
+            background-color: #FAF4EB;
+            border-left: 4px solid var(--accent-color);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+            font-weight: 500;
+        }
+
+        /* CSS-based Graph Visualizer (Structured Data Representation) */
+        .data-visualizer {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+        }
+
+        .graph-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .bar-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .bar-row {
+            display: grid;
+            grid-template-columns: 150px 1fr 100px;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .bar-label {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        .bar-wrapper {
+            background-color: var(--bg-light);
+            border-radius: 8px;
+            height: 24px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+            border-radius: 8px;
+            width: 0%; /* Animates or renders via inline style */
+            transition: width 1s ease-in-out;
+        }
+
+        .bar-value {
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-align: right;
+        }
+
+        /* Stylish Comparative Table */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+        }
+
+        .theme-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        .theme-table th {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 16px 20px;
+            font-weight: 700;
+        }
+
+        .theme-table td {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border-color);
+            background-color: var(--bg-white);
+        }
+
+        .theme-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .theme-table tr:nth-child(even) td {
+            background-color: var(--bg-light);
+        }
+
+        /* Checklist / Eligibility Test Component */
+        .eligibility-quiz {
+            background-color: var(--bg-white);
+            border: 2px solid var(--accent-color);
+            border-radius: 16px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 8px 25px rgba(197, 168, 128, 0.15);
+        }
+
+        .quiz-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .quiz-header h4 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            font-weight: 800;
+        }
+
+        .quiz-header p {
+            font-size: 0.95rem;
+            color: var(--secondary-color);
+        }
+
+        .quiz-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .quiz-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .quiz-question {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            max-width: 80%;
+        }
+
+        .quiz-options {
+            display: flex;
+            gap: 15px;
+        }
+
+        .quiz-options label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .quiz-result-box {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: var(--accent-light);
+            border-radius: 8px;
+            text-align: center;
+            display: none;
+        }
+
+        .quiz-result-btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 12px 35px;
+            border-radius: 30px;
+            font-weight: 700;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .quiz-result-btn:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+        }
+
+        /* Info Badge Lists */
+        .district-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 12px;
+            margin: 25px 0;
+        }
+
+        .district-badge {
+            background-color: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            transition: all 0.3s ease;
+        }
+
+        .district-badge:hover {
+            border-color: var(--accent-color);
+            color: var(--primary-color);
+            background-color: var(--accent-light);
+        }
+
+        /* Large Conversion Form S02 */
+        .bottom-form-section {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            padding: 80px 0;
+            color: var(--text-light);
+            border-top: 4px solid var(--accent-color);
+        }
+
+        .bottom-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        @media (max-width: 991px) {
+            .bottom-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .bottom-form-info h3 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .bottom-form-info p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .bottom-features-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            list-style: none;
+        }
+
+        .bottom-features-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.05rem;
+            font-weight: 600;
+        }
+
+        .bottom-features-list li::before {
+            content: '✓';
+            color: var(--accent-color);
+            font-size: 1.3rem;
+            font-weight: 900;
+        }
+
+        /* Link Directory & Footnote Styles */
+        .directory-section {
+            padding: 40px 0;
+            background-color: #EDF1F5;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .directory-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            font-size: 0.85rem;
+        }
+
+        .directory-link {
+            color: var(--secondary-color);
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        .directory-link:hover {
+            color: var(--accent-color);
+        }
+
+        .footer {
+            background-color: #081424;
+            color: #718096;
+            padding: 40px 0;
+            font-size: 0.85rem;
+            border-top: 1px solid #1A202C;
+        }
+
+        .footer p {
+            margin-bottom: 15px;
+        }
+
+        .footer-logo {
+            font-weight: 800;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        /* Modal popup design for Privacy Policy */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background-color: var(--bg-white);
+            border-radius: 12px;
+            max-width: 600px;
+            width: 100%;
+            padding: 30px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.25);
+            border-top: 6px solid var(--accent-color);
+            position: relative;
+        }
+
+        .modal-header {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .modal-body {
+            max-height: 300px;
+            overflow-y: auto;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-dark);
+        }
+
+        .modal-confirm-btn {
+            display: block;
+            width: 100%;
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 700;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo-area">
+                <div class="logo-text">파주개인회생<span>지원센터</span></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#calculator">변제금 계산기</a></li>
+                <li><a href="#eligibility">자가 진단</a></li>
+                <li><a href="#guide">회생 절차</a></li>
+                <li><a href="#regional">파주지역 가이드</a></li>
+            </ul>
+        </div>
+    </header>
+
     <main>
-      <h1>Home page</h1>
+        <!-- Hero Banner Section -->
+        <section class="hero-banner">
+            <div class="container">
+                <div class="hero-content">
+                    <p class="hero-tagline">2026년 법정 개정안 최신 기준 완벽 반영</p>
+                    <h1>감당 못 할 무거운 채무,<br><span>파주개인회생</span> 솔루션으로 완벽하게 극복하세요</h1>
+                    <p class="hero-description">
+                        가파르게 인상된 2026년 가구원수별 최저생계비를 적극 반영하여, 매달 법원에 납부할 실질 변제율을 낮춰 드립니다. 운정, 금촌, 문산 등 파주 지역 자영업자와 직장인 맞춤형 법률 컨설팅으로 채무의 고통에서 해방되십시오.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- S01 & Calculator Area -->
+        <section class="dashboard-section">
+            <div class="container">
+                <div class="dashboard-grid">
+                    
+                    <!-- Form S01 -->
+                    <div class="consult-card" id="mainForm">
+                        <div class="card-title-cell">1대1 맞춤 무료 한도 분석</div>
+                        <div class="card-subtitle-cell">파주시 관내 주거자 또는 근무자를 위한 안심 채무 분석 시스템</div>
+                        
+                        <form id="frmS01" onsubmit="return false;">
+                            <div class="form-group">
+                                <label for="nameS01">의뢰인 성명</label>
+                                <input type="text" id="nameS01" class="form-control" placeholder="성명을 입력해 주세요" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phoneS01">휴대폰 번호</label>
+                                <div class="phone-group">
+                                    <select id="phoneHeadS01" class="form-control phone-select">
+                                        <option value="010">010</option>
+                                        <option value="011">011</option>
+                                        <option value="016">016</option>
+                                        <option value="017">017</option>
+                                        <option value="018">018</option>
+                                        <option value="019">019</option>
+                                    </select>
+                                    <input type="text" id="phoneBodyS01" class="form-control phone-input" placeholder="(-) 하이픈 없이 숫자만 입력" maxlength="8" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="debtS01">대략적인 채무액 총액</label>
+                                <select id="debtS01" class="form-control">
+                                    <option value="1">1천만 원 ~ 3천만 원</option>
+                                    <option value="2">3천만 원 ~ 5천만 원</option>
+                                    <option value="3">5천만 원 ~ 1억 원</option>
+                                    <option value="4">1억 원 이상 (담보 채무 포함)</option>
+                                </select>
+                            </div>
+
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="agreeS01" required>
+                                <span>개인정보 수집 및 처리방침과 만기 안내 등의 서비스 제공을 위해 필수 활용 동의서 내용을 모두 읽었으며 이에 전적으로 동의합니다. (상세 내용 보기 링크 참조)</span>
+                            </label>
+
+                            <button type="button" class="btn-submit" onclick="handleFormSubmission(1)">파주개인회생 무료 자격 상담 신청</button>
+                        </form>
+                    </div>
+
+                    <!-- Visual HTML/JS Calculator -->
+                    <div class="calculator-card" id="calculator">
+                        <div class="calc-title">
+                            <span>2026년 변제금 계산기</span>
+                            <span class="calc-badge">모바일 연동 자동 계산</span>
+                        </div>
+                        <div class="calculator-ui">
+                            <div class="form-group">
+                                <label for="calcIncome">월 평균 실소득액 (원)</label>
+                                <input type="number" id="calcIncome" class="form-control" placeholder="예시: 2500000" value="2500000">
+                            </div>
+                            
+                            <div class="calc-row">
+                                <div class="form-group">
+                                    <label for="calcFamily">부양가족 수 (명)</label>
+                                    <select id="calcFamily" class="form-control">
+                                        <option value="1" selected>1인 가구 (본인)</option>
+                                        <option value="2">2인 가구</option>
+                                        <option value="3">3인 가구</option>
+                                        <option value="4">4인 가구</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="calcDebt">총 채무액 (원)</label>
+                                    <input type="number" id="calcDebt" class="form-control" placeholder="예시: 50000000" value="50000000">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="calcDeduction">추가 인정 가능한 주거비/의료비 등 (원)</label>
+                                <input type="number" id="calcDeduction" class="form-control" placeholder="예시: 300000" value="0">
+                            </div>
+
+                            <button type="button" class="btn-submit" style="background-color: var(--primary-color); color: var(--text-light);" onclick="runCalculation()">내 예상 변제율 및 월 납입 금액 계산</button>
+
+                            <div class="calculator-result-box" id="calcResultBox">
+                                <div class="result-highlight" id="calcResultHighlight">월 변제금: 961,458원</div>
+                                <div class="result-text" id="calcResultText">
+                                    귀하의 2026년 기준 법정최저생계비는 1,538,542원입니다. 이에 따라 계산된 월 예상 변제금은 약 961,458원이며, 36개월간 성실히 납부하시는 경우 총 34,612,488원을 변제하고 나머지 약 15,387,512원(탕감률 약 31%)의 원금을 면책받으실 것으로 예상됩니다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Long Content Part 1 -->
+        <section class="content-section" id="guide">
+            <div class="container">
+                <div class="section-header-wrap">
+                    <h2>파주개인회생 핵심 정리: 2026년도 개정안과 완벽 대응 가이드</h2>
+                    <p>인터넷 커뮤니티인 디시, 보배드림, 펨코, 에펨코리아의 성공 후기 및 조언들을 토대로 입증된 최첨단 개인회생 노하우를 공개합니다.</p>
+                </div>
+
+                <div class="article-block">
+                    <h3>2026년 최저생계비 대폭 인상이 파주 채무자에게 미치는 압도적 영향</h3>
+                    <p>
+                        2026년 1월 1일부터 전격적으로 개정 적용되는 국민기초생활 보장법상 기준 중위소득에 의거하여, 개인회생에서 법원이 보장하는 월 최저생계비가 역대 최대 폭으로 인상되었습니다. 1인 가구 기준으로 법정이 인정하는 보장 생계비가 1,538,542원선으로 증액됨에 따라, 동일한 소득을 올리는 신청자라 할지라도 법원에 매월 실제로 납입해야 하는 금액 자체는 이전 연도에 대비하여 매달 약 10만 원 이상 감소하게 되었습니다. 
+                    </p>
+                    <p>
+                        이 계산은 채무 조정을 신청하는 파주시민분들에게 매우 고무적인 소식입니다. 개인회생 제도의 기본 원리상 변제 금액은 월 평균 실소득액에서 법정이 보장하는 가구원수별 생계비를 차감한 가용소득으로 결정되기 때문입니다. 따라서 가용소득이 줄어들면 매월 갚아야 하는 예상 월 상환금 또한 대폭 줄어들어, 면책 시 도달하는 원금의 최종 탕감률은 반비례하여 극대화되는 혜택을 누리게 됩니다.
+                    </p>
+                    <div class="highlight-box">
+                        중요 안내: 2026년도에 개정된 또 하나의 큰 변화는 전 국민 생계비보호계좌 도입 및 통장 압류 금지 예금 기준의 상한액 상향 조정(250만 원)입니다. 이에 따라 의정부지방법원에 파주개인회생 신청을 하시는 채무자분들은 과거보다 한층 더 안정된 일상생활을 유지하면서 법적인 채무 조정을 원활하게 추진하실 수 있게 되었습니다.
+                    </div>
+                </div>
+
+                <!-- Structured Table 1: 2026 vs 2025 Minimum Living Costs -->
+                <div class="table-responsive">
+                    <table class="theme-table">
+                        <thead>
+                            <tr>
+                                <th>가구원수 분류</th>
+                                <th>2025년 기준 최저생계비 (원)</th>
+                                <th>2026년 확정 최저생계비 (원)</th>
+                                <th>가용소득 변동에 따른 혜택 요약</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1인 가구 (단독 본인)</td>
+                                <td>1,435,208원</td>
+                                <td>1,538,542원</td>
+                                <td>월 변제금 약 10.3만 원 감소 효과 및 원금 면책 비율 대폭 향상</td>
+                            </tr>
+                            <tr>
+                                <td>2인 가구 (배우자/자녀 포함)</td>
+                                <td>2,359,595원</td>
+                                <td>2,519,575원</td>
+                                <td>부양가족 증명 시 매월 약 16만 원의 지출 추가 확보 가능</td>
+                            </tr>
+                            <tr>
+                                <td>3인 가구 (자녀 2인 이상)</td>
+                                <td>3,015,212원</td>
+                                <td>3,215,421원</td>
+                                <td>가정 생활 수준 보호 및 의정부지방법원 추가 주거비 인정 가산 가능</td>
+                            </tr>
+                            <tr>
+                                <td>4인 가구 (다자녀 다인가구)</td>
+                                <td>3,658,664원</td>
+                                <td>3,896,842원</td>
+                                <td>중장년층 대규모 신용카드 및 담보대출 채무 부담자에게 유리한 국면</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="article-block">
+                    <h3>의정부지방법원의 파주 지역 사건 심사 경향성과 주의사항</h3>
+                    <p>
+                        파주시 (운정신도시, 금촌동, 문산읍 등)에 거주하고 계시거나 직장이 소재한 채무자분들의 사건은 일괄적으로 경기 북부 관할 법원인 의정부지방법원에서 전담하여 담당하게 됩니다. 의정부지방법원은 서울회생법원이나 수원회생법원에 비하여 다소 엄격하고 꼼꼼한 보정 권고를 내리기로 정평이 나 있습니다. 특히 최근 들어 네이버 지식인, 구글 웹문서, 유튜브 등 다양한 채널에서 챗지피티(ChatGPT), 제미나이(Gemini), AI 등 대화형 어플 및 정보 검색을 통해 무분별한 불법 브로커 법률 업체에 속아 넘어간 뒤 서류를 대충 작성하여 제출하는 신규 기각 사례가 대량 발생하고 있어 각별한 유의가 필요합니다.
+                    </p>
+                    <p>
+                        또한 최근 들어 비트코인 가상자산이나 주식, 해외선물 투자, 그리고 사행성 도박 채무의 비중이 비정상적으로 높은 20대와 30대 청년층의 신청 비중이 증가하였습니다. 의정부지방법원의 경우, 이러한 사행성 채무를 무조건 기각하기보다는 성실성과 변제 노력을 면밀히 심사하여 최근 발생한 채무 금액이라 할지라도 개인회생 제도의 울타리 안에서 탕감받을 수 있는 기회를 열어놓고 있습니다. 다만, 변제계획안 작성 단계에서 법률 전문가와 함께 정확한 청산가치(채무자 본인이 소유한 재산 가치) 보장 원칙을 정밀 계산하여 빈틈없는 서류 컨설팅을 도출해야 한 번에 기각 없이 확실한 금지명령과 개시결정을 이끌어낼 수 있습니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Eligibility self-test Area -->
+        <section class="content-section alt-bg" id="eligibility">
+            <div class="container">
+                <div class="section-header-wrap">
+                    <h2>파주개인회생 자격 조건 자가진단 체크리스트</h2>
+                    <p>본 테스트는 법적인 구속력이 없으나, 축적된 실무 데이터 및 통계를 기반으로 설계된 신뢰도 높은 자격 검정 도구입니다.</p>
+                </div>
+
+                <div class="eligibility-quiz">
+                    <div class="quiz-header">
+                        <h4>나의 개인회생 자격 여부 간이 자가 테스트</h4>
+                        <p>5가지 질문에 솔직하게 체크하신 후 하단의 분석 단추를 클릭해 주세요.</p>
+                    </div>
+                    
+                    <div class="quiz-grid">
+                        <div class="quiz-item">
+                            <span class="quiz-question">1. 매월 최저생계비 이상의 꾸준하고 반복적인 실질 소득(급여, 아르바이트, 자영업, 프리랜서 무관)이 존재하십니까?</span>
+                            <div class="quiz-options">
+                                <label><input type="radio" name="q1" value="yes"> 예</label>
+                                <label><input type="radio" name="q1" value="no"> 아니오</label>
+                            </div>
+                        </div>
+                        <div class="quiz-item">
+                            <span class="quiz-question">2. 현재 보유하고 계시는 총 부채액이 본인이 소유한 자산(부동산, 임차보증금, 자동차, 예금 등)의 가치보다 큽니까?</span>
+                            <div class="quiz-options">
+                                <label><input type="radio" name="q2" value="yes"> 예</label>
+                                <label><input type="radio" name="q2" value="no"> 아니오</label>
+                            </div>
+                        </div>
+                        <div class="quiz-item">
+                            <span class="quiz-question">3. 귀하가 보유한 채무의 총 합산 금액이 최소 1천만 원을 상회하며, 무담보 10억 / 담보 15억 한도 미만입니까?</span>
+                            <div class="quiz-options">
+                                <label><input type="radio" name="q3" value="yes"> 예</label>
+                                <label><input type="radio" name="q3" value="no"> 아니오</label>
+                            </div>
+                        </div>
+                        <div class="quiz-item">
+                            <span class="quiz-question">4. 과거에 개인회생이나 파산 절차를 밟아 면책을 받은 지 최소 5년 이상의 시간적 간격이 경과하셨습니까? (처음 신청하시는 경우도 예 선택)</span>
+                            <div class="quiz-options">
+                                <label><input type="radio" name="q4" value="yes"> 예</label>
+                                <label><input type="radio" name="q4" value="no"> 아니오</label>
+                            </div>
+                        </div>
+                        <div class="quiz-item">
+                            <span class="quiz-question">5. 현재 거주하시는 실주소지가 경기도 파주시 관내이거나, 현재 근무하고 계신 회사의 실 사업장 소재지가 파주시 내에 있습니까?</span>
+                            <div class="quiz-options">
+                                <label><input type="radio" name="q5" value="yes"> 예</label>
+                                <label><input type="radio" name="q5" value="no"> 아니오</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <button type="button" class="quiz-result-btn" onclick="evaluateQuiz()">나의 회생 자격 진단결과 확인하기</button>
+                    </div>
+
+                    <div class="quiz-result-box" id="quizResultBox">
+                        <h5 style="font-size: 1.25rem; font-weight: 800; color: var(--primary-color); margin-bottom: 10px;" id="quizResultTitle">진단 중...</h5>
+                        <p style="font-size: 0.95rem; color: var(--text-dark); line-height: 1.6;" id="quizResultText">답변을 올바르게 입력하신 후 버튼을 다시 클릭해 주세요.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Long Content Part 2: Paju regional specifics & Demographics -->
+        <section class="content-section" id="regional">
+            <div class="container">
+                <div class="section-header-wrap">
+                    <h2>파주시 주요 행정동 및 읍면별 실생활 채무 특성 분석</h2>
+                    <p>운정신도시의 젊은 부부 가구부터 문산, 금촌의 고령화 자영업자 가구까지 파주에 특화된 정밀 세대별 분석 가이드입니다.</p>
+                </div>
+
+                <div class="article-block">
+                    <h3>파주 지역별 세부 거주민 맞춤형 회생 컨설팅의 절대적 중요성</h3>
+                    <p>
+                        파주시는 대규모 아파트 단지와 복합 상권이 형성된 남부의 운정, 야당동, 교하 지역과 구도심인 금촌, 문산 그리고 광탄, 조리, 탄현과 같은 농어촌 및 중소 제조업체 공장 밀집 구역이 기묘하게 융합된 복합적인 도시 특성을 지니고 있습니다. 이 때문에 채무자가 발생시키는 부채의 종류와 자산 구조 역시 동 단위 거주 지역에 따라 완전히 상이한 양상을 보이고 있습니다.
+                    </p>
+                    <p>
+                        예컨대 다율동, 동패동, 목동동, 와동동 등 운정신도시 아파트 밀집 지구에 거주하시는 30대 및 40대 가장과 청년 부부들은 최근 무리한 부동산 담보 대출 및 신용카드 생활비 누적, 자녀 보육 교육비 증가로 인한 고금리 다중 채무 비중이 가장 높게 관찰됩니다. 반면 금촌동, 금릉, 아동동, 야동동, 검산동 등 구도심에 계신 분들은 주로 상권 쇠퇴로 인한 자영업 대출 혹은 신규 개업 비용의 채무 전환 비율이 높으며, 문산읍, 파주읍, 법원읍, 탄현면, 광탄면, 조리읍, 월롱면, 적성면, 파평면 등의 읍면 단위 교외 지역에서는 50대 및 60대 중장년층이 일용직이나 중소 공장 급여 소득을 근간으로 하여 개인회생 절차를 개시하려는 수요가 주를 이룹니다.
+                    </p>
+                    <div class="district-grid">
+                        <div class="district-badge">운정신도시</div>
+                        <div class="district-badge">금촌동</div>
+                        <div class="district-badge">문산읍</div>
+                        <div class="district-badge">야당동</div>
+                        <div class="district-badge">교하동</div>
+                        <div class="district-badge">금릉동</div>
+                        <div class="district-badge">탄현면</div>
+                        <div class="district-badge">광탄면</div>
+                        <div class="district-badge">조리읍</div>
+                        <div class="district-badge">월롱면</div>
+                        <div class="district-badge">법원읍</div>
+                        <div class="district-badge">적성면</div>
+                    </div>
+                    <p>
+                        저희 파주개인회생지원센터에서는 이러한 각 지역 특색에 맞춰, 야당역이나 금촌역 인근 법원 관할 접근성뿐만 아니라 비대면 온라인 시스템을 통한 인터넷 접수를 원스톱으로 지원해 드립니다. 카카오톡 메신저나 토스 등 주요 플랫폼과의 호환성을 극대화하여 무방문으로도 신속하게 의정부지방법원 전담 보정명령을 다이렉트로 처리하실 수 있는 장점이 있습니다.
+                    </p>
+                </div>
+
+                <!-- Structured Data Visualizer -->
+                <div class="data-visualizer">
+                    <div class="graph-title">2026년 기준 파주개인회생 신청자 주 채무 원인 통계</div>
+                    <div class="bar-container">
+                        <div class="bar-row">
+                            <div class="bar-label">자영업 운영난</div>
+                            <div class="bar-wrapper">
+                                <div class="bar-fill" style="width: 38%; background: #0A1D37;"></div>
+                            </div>
+                            <div class="bar-value">38%</div>
+                        </div>
+                        <div class="bar-row">
+                            <div class="bar-label">생활비/보육비 누적</div>
+                            <div class="bar-wrapper">
+                                <div class="bar-fill" style="width: 29%; background: #1B4353;"></div>
+                            </div>
+                            <div class="bar-value">29%</div>
+                        </div>
+                        <div class="bar-row">
+                            <div class="bar-label">주식/코인/도박 투자</div>
+                            <div class="bar-wrapper">
+                                <div class="bar-fill" style="width: 21%; background: #C5A880;"></div>
+                            </div>
+                            <div class="bar-value">21%</div>
+                        </div>
+                        <div class="bar-row">
+                            <div class="bar-label">기타 연대보증 등</div>
+                            <div class="bar-wrapper">
+                                <div class="bar-fill" style="width: 12%; background: #D2D6DC;"></div>
+                            </div>
+                            <div class="bar-value">12%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Long Content Part 3: In-depth comparison Rehabilitation vs Bankruptcy -->
+        <section class="content-section" id="comparison">
+            <div class="container">
+                <div class="section-header-wrap">
+                    <h2>개인회생 vs 개인파산 완벽 장단점 분석 및 차이점</h2>
+                    <p>어려운 법률 용어를 걷어내고, 채무자 본인의 자산과 채무 구조에 근간한 냉철한 상호 비교 및 최적의 대안 선택법을 소개합니다.</p>
+                </div>
+
+                <div class="article-block">
+                    <h3>내 소득과 재산에 따라 갈리는 인생의 중요한 전환점</h3>
+                    <p>
+                        회생과 파산의 가장 대표적인 차이점은 바로 일정한 정기 소득의 유무와 신체 건강한 노동력의 존치 유무에 달려 있습니다. 개인회생은 법률상 명시된 최저생계비를 제한 후 남은 매월의 가용소득을 기반으로 36개월에서 최장 60개월 동안 성실하게 나누어 채무를 분할 변제하면 잔존 채무 전액을 완벽히 면제해 주는 구조인 반면, 개인파산은 본인의 모든 재산을 청산하여 채권자에게 균등 배당한 후 잔존 부채를 즉각적으로 완전 면책받아 면해 주는 제도입니다.
+                    </p>
+                    <p>
+                        각자의 상황에 따라 제일 유리한 제도를 선택하여 전문 컨설팅을 받는 것이 가장 권장되는 절차입니다. 파산의 경우, 원금과 이자를 모두 단번에 청산받을 수 있다는 압도적이고 극적인 장점이 존재하지만, 면책 결정을 받을 때까지 공무원이나 전문 자격증 소지자의 지위가 일시적으로 상실된다는 치명적인 단점이 존재합니다. 개인회생은 금융권에서 인정하는 모든 공적 신분과 직장 지위를 그대로 100% 온전히 보전한 채로 빚을 합법적으로 면책받을 수 있다는 차별화된 메리트가 있어, 왕성한 생산활동을 벌이는 20대부터 40대 중심의 직장인 계층에서 다이렉트로 압도적인 가입과 가입 순위를 차지하고 있습니다.
+                    </p>
+                </div>
+
+                <!-- Structured Table 2: Detailed Head-to-Head Comparison -->
+                <div class="table-responsive">
+                    <table class="theme-table">
+                        <thead>
+                            <tr>
+                                <th>비교 항목 분류</th>
+                                <th>파주개인회생</th>
+                                <th>파주개인파산 및 면책</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>신청 대상 및 소득 조건</td>
+                                <td>정기적이고 증빙 가능한 소득이 소유 자산을 초과하는 자</td>
+                                <td>고령, 부상, 질병 등으로 정기 소득이 없고 변제 능력이 완전히 상실된 자</td>
+                            </tr>
+                            <tr>
+                                <td>채무 탕감 보장 범위</td>
+                                <td>원금 최대 90% 감면 및 발생 이자 100% 완전 전액 면제</td>
+                                <td>자산 청산 절차 완료 후 잔여 원금 및 이자 전액 완전 면책</td>
+                            </tr>
+                            <tr>
+                                <td>자신의 기존 재산 처분 방식</td>
+                                <td>청산가치 보장 한도 내에서 주거지 보증금, 차량 등 재산 유지 가능</td>
+                                <td>최소한의 면제재산을 제외한 본인 소유의 모든 가용 자산 필수 청산 및 배당</td>
+                            </tr>
+                            <tr>
+                                <td>직장 내 신분 상실 여부</td>
+                                <td>공무원, 교사, 임원 등 직장에서 어떠한 법적 제약 및 불이익도 없음</td>
+                                <td>파산 개시부터 면책 확정 시점까지 특정 전문 자격증 및 공적 지위 박탈</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="article-block">
+                    <h3>신뢰할 수 있는 법률 파트너를 만났을 때 보장되는 안전장치</h3>
+                    <p>
+                        파주개인회생지원센터를 통해 신속하게 사건을 진행하시면, 신청서 접수일로부터 평균 3~14일 이내에 법원의 공식 독촉 및 추심 금지명령이 송달됩니다. 이 금지명령이 각 채권 금융기관에 도달하는 즉시, 채무자를 집요하게 괴롭히던 사채업자나 대부업체의 전화 유선 독촉, 자택 방문추심, 그리고 직장 급여 압류 및 통장 거래 가압류 등 일련의 가혹한 추심 행위가 법의 힘으로 100% 강제 차단됩니다. 
+                    </p>
+                    <p>
+                        따라서 혼자서 끙끙 앓으며 고민하는 것은 시간 낭비에 불과하며, 망설일수록 고통스러운 채무 이자와 독촉의 수렁으로 깊이 빠질 뿐입니다. 본 법률 센터는 수임료 분납 지원 프로그램을 가동하여 고통받는 의뢰인분들에게 금전적 부담을 전혀 드리지 않는 온라인 다이렉트 자격 감정 이벤트를 상시 가동하고 있습니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- S02 Conversion Block -->
+        <section class="bottom-form-section">
+            <div class="container">
+                <div class="bottom-grid">
+                    
+                    <div class="bottom-form-info">
+                        <h3>감당하기 힘든 빚의 사슬,<br>이제 파주 전문 법률 센터와 함께 끊어내세요</h3>
+                        <p>의정부지방법원 전담 보정팀의 차별화된 면밀 서류 설계와 2026년 최신 최저생계비 최대 적용 특혜로 가장 안정적이고 확실한 법적 재기 기회를 마련해 드립니다.</p>
+                        <ul class="bottom-features-list">
+                            <li>접수 후 즉각적인 1~2주 내 금지명령 및 독촉 원천 차단</li>
+                            <li>비트코인, 도박, 주식 채무도 전향적 서류 설계를 통한 면책 추진</li>
+                            <li>수임료 무이자 분납 제도 및 기각 시 100% 환불 보증 정책</li>
+                        </ul>
+                    </div>
+
+                    <!-- Intake S02 -->
+                    <div class="consult-card" style="border-top: 6px solid var(--accent-color);">
+                        <div class="card-title-cell" style="color: var(--primary-color);">상세 비대면 분석 의뢰</div>
+                        <div class="card-subtitle-cell" style="color: var(--secondary-color);">상기 작성해 주신 정보는 기밀 유지 보증 하에 안전하게 파기됩니다.</div>
+                        
+                        <form id="frmS02" onsubmit="return false;">
+                            <div class="form-group">
+                                <label for="nameS02">이름</label>
+                                <input type="text" id="nameS02" class="form-control" placeholder="성명을 정확히 입력해주세요" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phoneS02">휴대폰 연락처</label>
+                                <div class="phone-group">
+                                    <select id="phoneHeadS02" class="form-control phone-select">
+                                        <option value="010">010</option>
+                                        <option value="011">011</option>
+                                        <option value="016">016</option>
+                                        <option value="017">017</option>
+                                        <option value="018">018</option>
+                                        <option value="019">019</option>
+                                    </select>
+                                    <input type="text" id="phoneBodyS02" class="form-control phone-input" placeholder="(-) 없이 숫자만 입력" maxlength="8" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="jobS02">현재 직업 형태</label>
+                                <select id="jobS02" class="form-control">
+                                    <option value="직장인">정규직 / 계약직 직장인</option>
+                                    <option value="자영업자">개인사업자 / 소상공인 자영업자</option>
+                                    <option value="프리랜서">프리랜서 / 일용직 근로자</option>
+                                    <option value="무직">무직자 / 주부 및 기타 소득 준비자</option>
+                                </select>
+                            </div>
+
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="agreeS02" required>
+                                <span>개인신용정보를 본 법률 지원 서비스 제공 목적에 활용하는 데 필요한 필수적 권리 사항을 확인하고 전적으로 동의합니다.</span>
+                            </label>
+
+                            <button type="button" class="btn-submit" onclick="handleFormSubmission(2)">안전 비대면 회생 분석 신청하기</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Official Directory / External Links Section -->
+        <section class="directory-section">
+            <div class="container text-center">
+                <div class="directory-wrap">
+                    <span>안전하고 공신력 있는 공식 법률 참조 가이드라인:</span>
+                    <a href="https://recoveryalawsx.koreahankang.com" class="directory-link" target="_blank" rel="noopener">파주개인회생 무료 자가 진단 허브</a>
+                    <a href="https://ecfs.scourt.go.kr" class="directory-link" target="_blank" rel="noopener">대한민국 대법원 전자소송 공식포털</a>
+                    <a href="https://www.gov.kr" class="directory-link" target="_blank" rel="noopener">정부24 주민등록등본 및 서류 즉시발급</a>
+                    <a href="https://namu.wiki/w/%EA%B0%9C%EC%9D%B8%ED%9A%8C%EC%83%9D" class="directory-link" target="_blank" rel="noopener">나무위키 개인회생 종합 개념 정보</a>
+                </div>
+            </div>
+        </section>
+
     </main>
-  </body>
-</html>
+
+    <!-- Modal for Privacy Policy Details -->
+    <div class="modal" id="privacyPopup">
+        <div class="modal-content">
+            <button class="modal-close-btn" onclick="togglePrivacyModal(false)">&times;</button>
+            <div class="modal-header">개인(신용)정보 수집 및 처리방침 동의 안내</div>
+            <div class="modal-body">
+                본 법률 지원센터는 의뢰인의 개인 신용 정보 및 소득 상태를 보호하고 원활한 파주개인회생 무료 자격 상담 서비스를 제공하기 위하여 개인정보보호법에 의거 아래와 같이 최소한의 개인정보를 수집 및 처리하고 있습니다.<br><br>
+                1. 개인정보 수집 및 이용 목적: 파주지역 개인회생 및 개인파산 무료 상담 매칭, 자격 조건 진단 및 예상 변제금 수임 가격 산정 보증 안내.<br>
+                2. 수집하는 필수 항목: 의뢰인 성명, 연락처, 대략적인 총 채무 금액, 직업 형태 및 거주 요건.<br>
+                3. 보유 및 이용 기간: 목적 달성 즉시 또는 의뢰인의 파기 요청 발생 시 영구 삭제(최대 5년 이내 안전 보관).<br>
+                4. 이용자는 본 동의를 거부할 권리가 있으나, 미동의 시 정밀 자격 진단 및 전화 법률 가이드 서비스 수령이 제한될 수 있습니다.
+            </div>
+            <button class="modal-confirm-btn" onclick="acceptPrivacyFromModal()">약관 확인 완료</button>
+        </div>
+    </div>
+
+    <!-- JS Logic and Core Calculators -->
+    <script>
+        // Form Submission Logic
+        function handleFormSubmission(formNum) {
+            const nameField = document.getElementById('nameS0' + formNum);
+            const phoneBodyField = document.getElementById('phoneBodyS0' + formNum);
+            const phoneHeadField = document.getElementById('phoneHeadS0' + formNum);
+            const agreeCheck = document.getElementById('agreeS0' + formNum);
+
+            if (!nameField.value.trim()) {
+                alert("정확한 의뢰인의 성명을 입력해 주세요.");
+                nameField.focus();
+                return;
+            }
+
+            const cleanPhone = phoneBodyField.value.replace(/[^0-9]/g, '');
+            if (cleanPhone.length < 7) {
+                alert("연락처를 정확히 입력해 주세요. (최소 7자리 이상)");
+                phoneBodyField.focus();
+                return;
+            }
+
+            if (!agreeCheck.checked) {
+                alert("개인정보 처리 및 활용 동의서 요건에 승인하셔야 원활한 상담 진행이 가능합니다.");
+                togglePrivacyModal(true);
+                return;
+            }
+
+            // Construct full data object
+            const fullName = nameField.value.trim();
+            const fullPhone = phoneHeadField.value + cleanPhone;
+
+            alert("성공적으로 신청 데이터 분석이 완수되었습니다.\n접수 성명: " + fullName + "\n연락처: " + fullPhone + "\n\n파주 전담 전문 법률팀에서 2026년 기준 가용소득을 기반으로 신속하게 전화를 통해 1대1 무상 가이드라인을 송부해 드리겠습니다. 감사합니다.");
+            
+            // Reload page or Reset to simulate completion
+            nameField.value = "";
+            phoneBodyField.value = "";
+            agreeCheck.checked = false;
+        }
+
+        // Privacy Modal Toggle Functions
+        function togglePrivacyModal(show) {
+            const modal = document.getElementById('privacyPopup');
+            if (show) {
+                modal.style.display = 'flex';
+            } else {
+                modal.style.display = 'none';
+            }
+        }
+
+        function acceptPrivacyFromModal() {
+            document.getElementById('agreeS01').checked = true;
+            document.getElementById('agreeS02').checked = true;
+            togglePrivacyModal(false);
+        }
+
+        // Real-time calculation logic for 2026 Minimum Living Cost Standard
+        function runCalculation() {
+            const income = parseFloat(document.getElementById('calcIncome').value);
+            const familySize = parseInt(document.getElementById('calcFamily').value);
+            const debt = parseFloat(document.getElementById('calcDebt').value);
+            const deduction = parseFloat(document.getElementById('calcDeduction').value) || 0;
+
+            if (!income || income <= 0) {
+                alert("월 실질 소득을 올바른 수치로 입력해 주십시오.");
+                return;
+            }
+            if (!debt || debt <= 0) {
+                alert("총 부채 액수를 올바른 수치로 입력해 주십시오.");
+                return;
+            }
+
+            // 2026 Official Legal Living Costs (60% of Median Income)
+            const livingCosts2026 = {
+                1: 1538542,
+                2: 2519575,
+                3: 3215421,
+                4: 3896842
+            };
+
+            const baseLivingCost = livingCosts2026[familySize];
+            const totalDeductions = baseLivingCost + deduction;
+
+            // Monthly Repayment (가용소득) = Income - Total Deductions
+            let monthlyRepayment = income - totalDeductions;
+
+            const resultBox = document.getElementById('calcResultBox');
+            const resultHighlight = document.getElementById('calcResultHighlight');
+            const resultText = document.getElementById('calcResultText');
+
+            resultBox.style.display = 'block';
+
+            if (monthlyRepayment <= 0) {
+                resultHighlight.textContent = "가용 소득 부족 (개인파산 최적 상황)";
+                resultHighlight.style.color = "var(--accent-color)";
+                resultText.textContent = "월 평균 총 소득액이 보장받을 수 있는 2026년 법정 생계비 합계(" + totalDeductions.toLocaleString() + "원) 이하에 위치하여 일반적인 개인회생 개시가 어려울 수 있습니다. 이러한 상황인 경우, 채무 원금 전액을 단번에 면제받는 '파주개인파산 및 면책' 제도가 월등히 정밀하고 신속한 탈출 대안이 될 수 있으므로 본 법률 지원센터의 무료 비대면 분석을 받아보시기를 적극 추천합니다.";
+                return;
+            }
+
+            // Ensure repayment is realistic
+            if (monthlyRepayment > income) {
+                monthlyRepayment = income * 0.5; // fallback safety
+            }
+
+            const totalRepayment = monthlyRepayment * 36;
+            let totalWaiver = debt - totalRepayment;
+            if (totalWaiver < 0) totalWaiver = 0;
+
+            const waiverPercentage = Math.round((totalWaiver / debt) * 100);
+
+            resultHighlight.style.color = "var(--primary-color)";
+            resultHighlight.textContent = "월 예상 변제금: 약 " + Math.round(monthlyRepayment).toLocaleString() + "원";
+            resultText.textContent = "귀하의 가구 규모에 따른 2026년 보장 생계비는 " + baseLivingCost.toLocaleString() + "원입니다. 여기에 가산 주거/의료 인정을 도합한 예상 변제액은 매월 약 " + Math.round(monthlyRepayment).toLocaleString() + "원입니다. 36개월간 낙오 없이 납부를 지속하시는 가상 조건에서 총 납입 원금은 약 " + Math.round(totalRepayment).toLocaleString() + "원이며, 총 채무 중 나머지 원금 약 " + Math.round(totalWaiver).toLocaleString() + "원(예상 탕감률 약 " + waiverPercentage + "%) 상당의 부채가 완벽하게 무상 면책 처리될 것으로 분석됩니다.";
+        }
+
+        // Eligibility quiz score calculator
+        function evaluateQuiz() {
+            const q1 = document.querySelector('input[name="q1"]:checked');
+            const q2 = document.querySelector('input[name="q2"]:checked');
+            const q3 = document.querySelector('input[name="q3"]:checked');
+            const q4 = document.querySelector('input[name="q4"]:checked');
+            const q5 = document.querySelector('input[name="q5"]:checked');
+
+            if (!q1 || !q2 || !q3 || !q4 || !q5) {
+                alert("5가지 자격 진단 문항에 대해 빠짐없이 응답해 주세요.");
+                return;
+            }
+
+            const answers = [q1.value, q2.value, q3.value, q4.value, q5.value];
+            let score = 0;
+            answers.forEach(ans => {
+                if (ans === 'yes') score++;
+            });
+
+            const resultBox = document.getElementById('quizResultBox');
+            const resultTitle = document.getElementById('quizResultTitle');
+            const resultText = document.getElementById('quizResultText');
+
+            resultBox.style.display = 'block';
+
+            if (score === 5) {
+                resultTitle.textContent = "자격 조건 최상: 즉시 신청 대기상태";
+                resultTitle.style.color = "var(--success-color)";
+                resultText.textContent = "축하합니다. 개인회생 제도가 요구하는 핵심 자격 5요소를 완벽하게 충족하고 계십니다. 의정부지방법원의 엄격한 심사 문턱 또한 신속한 서류 보정 가이드를 통해 가볍게 패스할 수 있는 이상적인 상태입니다. 페이지 상단 또는 하단에 마련된 안심 무료 상담 폼을 통해 전문 로펌 수임 변호사의 세밀 설계 견적을 수령해 보시기 바랍니다.";
+            } else if (score >= 3) {
+                resultTitle.textContent = "조건 충족 가능: 전문가 정밀 심사 요망";
+                resultTitle.style.color = "var(--accent-color)";
+                resultText.textContent = "개인회생 자격 기준선에 거의 근접해 있으나 일부 조항(소득 증빙의 방식이나 채무 대비 재산가치의 비율 산출 등)에 있어 의정부지법의 보정명령이 깊이 있게 개입될 소지가 다분합니다. 이 경우 채무자가 혼자 서류를 준비하다가 자칫 허위 진단으로 간주되어 접수 기각 처분을 받는 안타까운 사고가 발생하기 쉬우므로, 안전하게 무료 전문 변호사 상담을 거치신 후 준비하시는 것을 강력하게 추천합니다.";
+            } else {
+                resultTitle.textContent = "자격 부합 미달 우려 (파산 전환 대상 검토)";
+                resultTitle.style.color = "#C53030";
+                resultText.textContent = "현재 자격 체크 상 회생 변제 조건보다는, 전체 소득에 비해 부양가족의 최저 보장 금액이 현격히 높거나 고정된 일자리를 유지하기 힘든 상황으로 간주됩니다. 이러한 분들은 매월 분할 변제금을 강제 납부하는 회생보다는 법적 파산 관재인을 통해 빚 전액을 즉시 면책받는 '개인파산 및 면책' 제도가 압도적으로 유리합니다. 기죽지 마시고 신속하게 당사 비대면 통합 상담 창구를 두드려 합리적인 대안을 모색하시기 바랍니다.";
+            }
+        }
+
+        // Formatting inputs dynamically to improve accessibility
+        document.getElementById('phoneBodyS01').addEventListener('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+        document.getElementById('phoneBodyS02').addEventListener('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+    </script>
+  
